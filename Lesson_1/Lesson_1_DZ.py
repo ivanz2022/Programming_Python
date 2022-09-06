@@ -1,8 +1,4 @@
 import math
-############################################################
-# Домашнее задание 1
-############################################################
-
 # 1. Напишите программу, которая принимает на вход цифру, обозначающую день недели, 
 # и проверяет, является ли этот день выходным.
 # Пример:
@@ -10,23 +6,23 @@ import math
 # - 7 -> да
 # - 1 -> нет
 
-# num = int(input('Введите число от 1 до 7: '))
+num = int(input('Введите число от 1 до 7: '))
 
-# if num > 0 and num < 6:
-#     print ('День рабочий')
-# elif num == 6 or num == 7:
-#     print ('День выходной')
-# else:
-#     print ('Некорректное число')
+if num > 0 and num < 6:
+    print ('День рабочий')
+elif num == 6 or num == 7:
+    print ('День выходной')
+else:
+    print ('Некорректное число')
 
 # 2. Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z 
 # для всех значений предикат.
 
-# for x in range(2):
-#     for y in range(2):
-#         for z in range(2):
-#             print(not (x or y or z) == (not x and not y and not z))
-#             print(x, y, z)
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            print(not (x or y or z) == (not x and not y and not z))
+            print(x, y, z)
 
 # 3. Напишите программу, которая принимает н1од координаты точки (X и Y), 
 # причём X ≠ 0 и Y ≠ 0 и выдаёт номер четвер1лоскости, в которой находится эта точка 
@@ -36,50 +32,49 @@ import math
 # - x=2; y=4-> 1
 # - x=-34; y=-30 -> 3
 
-# num1 = int(input('Введите X: '))
-# num2 = int(input('Введите Y: '))
+num1 = int(input('Введите X: '))
+num2 = int(input('Введите Y: '))
 
-# if num1 == 0 or num2 == 0:
-#     print('Число 0 вводить нельзя!')
-# elif num1 > 0 and num2 > 0:
-#     print('Четверть 1')
-# elif num1 < 0 and num2 > 0:
-#     print('Четверть 2')
-# elif num1 < 0 and num2 < 0:
-#     print('Четверть 3')
-# elif num1 > 0 and num2 < 0:
-#     print('Четверть 4')
+if num1 == 0 or num2 == 0:
+    print('Число 0 вводить нельзя!')
+elif num1 > 0 and num2 > 0:
+    print('Четверть 1')
+elif num1 < 0 and num2 > 0:
+    print('Четверть 2')
+elif num1 < 0 and num2 < 0:
+    print('Четверть 3')
+elif num1 > 0 and num2 < 0:
+    print('Четверть 4')
 
 
 # 4. Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных 
 # координат точек в этой четверти (x и y).
 
-# chetvert = int(input('Введите четверть: '))
-# if chetvert == 1:
-#     print('x = 0...+N, y = 0...+N')
-# elif chetvert == 2:
-#     print('x = 0...-N, y = 0...+N')
-# elif chetvert == 3:
-#     print('x = 0...-N, y = 0...-N')
-# elif chetvert == 4:
-#     print('x = 0...+N, y = 0...-N')
-# else:
-#     print('Такой четверти нет!')
+chetvert = int(input('Введите четверть: '))
+if chetvert == 1:
+    print('x = 0...+N, y = 0...+N')
+elif chetvert == 2:
+    print('x = 0...-N, y = 0...+N')
+elif chetvert == 3:
+    print('x = 0...-N, y = 0...-N')
+elif chetvert == 4:
+    print('x = 0...+N, y = 0...-N')
+else:
+    print('Такой четверти нет!')
 
 # 5. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние 
 # между ними в 2D пространстве.
-
 # Пример:
 # - A (3,6); B (2,1) -> 5,09
 # - A (7,-5); B (1,-1) -> 7,21
 
-# x1 = int(input('Введите координату X1: '))
-# y1 = int(input('Введите координату Y1: '))
-# x2 = int(input('Введите координату X2: '))
-# y2 = int(input('Введите координату Y2: '))
+x1 = int(input('Введите координату X1: '))
+y1 = int(input('Введите координату Y1: '))
+x2 = int(input('Введите координату X2: '))
+y2 = int(input('Введите координату Y2: '))
 
-# distanceX = (x2 - x1)
-# distanceY = (y2 - y1)
+distanceX = (x2 - x1)
+distanceY = (y2 - y1)
 
-# distance = math.sqrt((distanceX**2) + (distanceY**2))
-# print(f'Расстояние между точками: {round(distance, 2)}')
+distance = math.sqrt((distanceX**2) + (distanceY**2))
+print(f'Расстояние между точками: {round(distance, 2)}')
